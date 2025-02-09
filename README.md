@@ -52,12 +52,12 @@ Each line in the input file contains **two numbers**:\
 
 📌 **Example Input (`simple-input.txt`):**
 
-`6 3
-10 0
-9 2
-8 14
-8 15
-26 0`
+`6 3`  
+`10 0`  
+`9 2`  
+`8 14`  
+`8 15`  
+`26 0`  
 
 * * * * *
 
@@ -67,12 +67,12 @@ Each line in the output file contains a **single word** matching the input query
 
 📌 **Example Output (`simple-output.txt`):**
 
-`father
-gloucester
-messenger
-business
-personal
--`
+`father`  
+`gloucester`  
+`messenger`  
+`business`  
+`personal`  
+`-`  
 
 * * * * *
 

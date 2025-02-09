@@ -1,0 +1,31 @@
+HW1: A dramatic Analysis README:
+By: Raghavendra Raikar
+
+
+Usage:
+    This file contains a linkedlist.h file which has a structure called Node and a class called LinkedList which has a private node called head to represent the head of a Linked List and has declarations for all the functions the LinkedList class has. The LinkedList.cpp file contains all the function implementations for the LinkedList class. Finally, the bard.cpp file is the main file which is used to run the whole project. To run this project cd into the Bard folder and then run make to compile files and then run ./bard <input file> <output file>. The input file is the file the program will read from and the output file is the file the program will write its results to.
+
+Citations:
+    Used LinkedList example in codio for:
+        - reading file input
+        -#include statements
+        - to create makefile for this project
+        - Used struct Node and LinkedList class
+        - Followed same file structure
+        - Used basic functions like insert, find, length,
+            etc.
+    Outside Sources:
+        Used Geeks for Geeks to implement Merge Sort algorithm:
+            - https://www.geeksforgeeks.org/merge-sort-for-linked-list/
+
+        For file reading used:
+            - https://www.delftstack.com/howto/cpp/read-int-from-file-cpp/
+
+        For outputing to a file used:
+            - https://cplusplus.com/doc/tutorial/files/
+
+        
+
+        
+
+    

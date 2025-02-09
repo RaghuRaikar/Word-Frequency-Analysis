@@ -1,42 +1,56 @@
-📖 **Word Frequency Analyzer**
-==============================
+📖 Word Frequency Analyzer
+==========================
 
-🚀 **Analyze and rank words from any text dataset!**
+🔍 **Analyze and rank words from any text dataset!**
 
-This program efficiently processes **large text files**, identifies word frequencies, and ranks them based on **length, frequency, and lexicographic order**. Currently analyzes **Shakespeare's works**, but it can handle **any cleaned text dataset** where words are separated by new lines.
+🛠 Purpose of the Program
+-------------------------
+
+This program is designed to analyze large text datasets by identifying **word frequencies** and ranking words based on **length, frequency, and lexicographic order**. Originally built for processing **Shakespeare's works**, it can be applied to **any structured text dataset** where words are stored line by line.
+
+### 🔹 **Use Cases:**
+
+✅ **Literary Analysis** -- Identify common themes in classic works like Shakespeare, Dickens, or Austen\
+✅ **Data Processing** -- Extract and rank words from research papers, articles, or books\
+✅ **Linguistic Research** -- Study word frequency distribution and text complexity\
+✅ **Natural Language Processing (NLP) Preprocessing** -- Create structured datasets from raw text
+
+This tool is particularly useful for **students, researchers, linguists, and developers** interested in **text analytics and computational linguistics**.
 
 * * * * *
 
-📌 **Features**
+📌 Features
+-----------
+
+✅ **Custom-built linked list** for efficient word storage & retrieval\
+✅ **Processes any text dataset** with words stored line-by-line\
+✅ **Optimized ranking** based on frequency & lexicographic order\
+✅ **Handles large files** with efficient memory usage\
+✅ **Command-line interface (CLI)** for flexible input/output processing\
+✅ **Makefile included** for easy compilation
+
+* * * * *
+
+🛠 How It Works
 ---------------
 
-✅ **Custom-built linked list** for efficient word storage and retrieval\
-✅ **Processes any text dataset** with words stored line-by-line\
-✅ **Fast word ranking by frequency & lexicographic order**\
-✅ **Handles large files with optimized memory usage**\
-✅ **Command-line interface (CLI) for flexible input/output processing**\
-✅ **Makefile for automated compilation**
-
-* * * * *
-
-🛠 **How It Works**
--------------------
-
-This program reads a **cleaned text file**, where each line contains a single lowercase word.\
-It then:\
+The program reads a **cleaned text file**, where each line contains a **single lowercase word**. It then:\
 🔹 **Stores words & their frequencies** in a linked list (no built-in lists or arrays)\
 🔹 **Processes user queries** to find the most frequent words of a given length\
 🔹 **Outputs results** based on ranking & lexicographic order
 
-### 🔍 **Example Input (Shakespeare's Dataset)**
+* * * * *
 
-Each query consists of two numbers:
+🔍 Understanding the Input & Output
+-----------------------------------
 
--   The **word length** to filter words
--   The **rank** (0-based) of the word sorted by frequency
+### 📥 **Input File (e.g., `simple-input.txt`)**
 
-📌 **Query File (`input.txt`):**
+Each line in the input file contains **two numbers**:\
+1️⃣ **Word length** -- Filters words of a specific length\
+2️⃣ **Rank (0-based)** -- Returns the word at that rank based on **frequency & lexicographic order**
 
+📌 **Example Input (`simple-input.txt`):**
 
 `6 3
 10 0
@@ -45,7 +59,13 @@ Each query consists of two numbers:
 8 15
 26 0`
 
-📌 **Generated Output (`output.txt`):**
+* * * * *
+
+### 📤 **Output File (e.g., `simple-output.txt`)**
+
+Each line in the output file contains a **single word** matching the input query, or `-` if no word is found.
+
+📌 **Example Output (`simple-output.txt`):**
 
 `father
 gloucester
@@ -54,80 +74,90 @@ business
 personal
 -`
 
--   `"gloucester"` is the **most frequent word** of **10 letters**
--   `"business"` and `"personal"` have the **same frequency**, but `"business"` appears **earlier lexicographically**
--   `"-"` means **no matching word found**
+* * * * *
 
-### 🔄 **Supports Any Dataset**
+### 📌 **How to Interpret the Output:**
 
-While this program was tested with **Shakespeare's works**, it can analyze **any dataset** formatted as:
+-   **"father"** → The **4th most frequent word** (rank 3) with **6 letters**
+-   **"gloucester"** → The **most frequent word** (rank 0) with **10 letters**
+-   **"business"** and **"personal"** have the **same frequency**, but **"business"** appears first lexicographically
+-   **"-"** → No word exists for that query (e.g., Shakespeare never used a word with 26 letters)
+
+* * * * *
+
+🔄 Supports Any Dataset
+-----------------------
+
+While this program was tested with **Shakespeare's works**, it can analyze **any** dataset formatted as:
 
 `word1
 word2
 word3
 ...`
 
-Just replace the input file with your own **cleaned text dataset**.
+Simply **replace `shakespeare-cleaned5.txt`** with any **cleaned** text dataset.
 
 * * * * *
 
-🚀 **Performance & Constraints**
---------------------------------
+🚀 Performance & Constraints
+----------------------------
 
 ⚡ **Optimized Execution:**
 
--   Handles up to **200 queries in under 2 minutes**
+-   Handles **up to 200 queries** in **under 2 minutes**
 -   Uses **efficient linked list operations** for quick lookups
--   Memory-efficient design for **large datasets**
+-   **Memory-efficient** design for large datasets
 
 🔹 **Error Handling:**
 
--   If no word of the given length exists, it **returns `'-'`**
+-   If no word of the given length exists, it returns `-`
 -   If multiple words share the same frequency, they are ranked **alphabetically**
 
 * * * * *
 
-📦 **Installation & Usage**
----------------------------
+📦 Installation & Usage
+-----------------------
 
-### 📥 **1\. Clone the Repository**
-
+### 📥 1. Clone the Repository
 
 `git clone https://github.com/your-repo/word-analyzer.git`  
 `cd word-analyzer`
 
-### 🏗 **2\. Build the Program**
+### 🏗 2. Build the Program
 
 `make`
 
-This creates an executable named `bard`.
+This will create an **executable** named `bard`.
 
-### ▶️ **3\. Run the Program**
+### ▶️ 3. Run the Program
 
-`./bard input.txt output.txt`
+`./bard simple-input.txt simple-output.txt`
 
--   `input.txt` contains **query pairs** (word length & rank).
--   `output.txt` stores the generated results.
+📌 **Explanation:**
 
-🔹 **To use your own dataset**, replace `input.txt` with a **custom dataset** following the same structure.
+-   `simple-input.txt` contains **query pairs** (word length & rank).
+-   `simple-output.txt` stores the **generated results**.
+-   **To use your own dataset**, replace `shakespeare-cleaned5.txt` with a **custom dataset** following the same structure.
 
 * * * * *
 
-📂 **File Structure**
----------------------
+📂 File Structure
+-----------------
 
 - 📂 word-analyzer
-- ├── 📄 Makefile       # Automates compilation
-- ├── 📄 bard.cpp       # Main program logic
-- ├── 📄 linkedlist.h   # Custom linked list implementation
-- ├── 📄 input.txt      # Sample input queries
-- ├── 📄 output.txt     # Generated output
-- ├── 📄 README.md      # This file`
+- ├── 📄 Makefile               # Automates compilation
+- ├── 📄 bard.cpp               # Main program logic
+- ├── 📄 linkedlist.cpp         # Custom linked list implementation
+- ├── 📄 linkedlist.h           # Linked list header file
+- ├── 📄 shakespeare-cleaned5.txt # Cleaned text dataset
+- ├── 📄 simple-input.txt       # Sample input queries
+- ├── 📄 simple-output.txt      # Generated output
+- ├── 📄 README.md              # This file`
 
 * * * * *
 
-🎯 **Algorithm Overview**
--------------------------
+🎯 Algorithm Overview
+---------------------
 
 1️⃣ **Read and Parse Words**\
 2️⃣ **Store Words in a Linked List**\
@@ -137,8 +167,8 @@ This creates an executable named `bard`.
 
 * * * * *
 
-📜 **Fun Facts from the Shakespeare Dataset!**
-----------------------------------------------
+📜 Fun Facts from the Shakespeare Dataset!
+------------------------------------------
 
 🎭 **Longest Word:** *honorificabilitudinitatibus*\
 🧛 **Creepiest Word?** *anthropophaginian* (a cannibal!)\
@@ -146,37 +176,29 @@ This creates an executable named `bard`.
 
 * * * * *
 
-🚀 **Releases & Demo**
+🚀 Releases & Demo
+------------------
+
+📽 **Watch the program in action!** 👉 **[Check out the latest release](https://github.com/your-repo/releases)**
+
+💡 **To include `.mov` demo in README:**\
+1️⃣ Upload your `.mov` file as part of a **GitHub Release**\
+2️⃣ Add a **link to the Release Page** in this section
+
+* * * * *
+
+💡 Want to Improve It?
 ----------------------
 
-📽 **Watch the program in action!** [👉 Check out the latest release](https://github.com/your-repo/word-analyzer/releases)
-
-💡 **To include `.mov` demo in README**:
-
--   Upload your `.mov` file as part of a **GitHub Release**
--   Add a link to the **Release Page** in this section
+🔹 **Implement trie structures** for even faster lookups\
+🔹 **Expand beyond Shakespeare** to analyze **other classic texts**\
+🔹 **Optimize further** with **hashmaps & AVL trees**
 
 * * * * *
 
-### 💡 **Want to Improve It?**
-
--   Implement **trie structures** for even faster lookups
--   Expand **beyond Shakespeare** to analyze other classic texts
--   Optimize further with **hashmaps & AVL trees**
-
-* * * * *
-
-### 🏆 **Built With**
+🏆 Built With
+-------------
 
 🔹 **C/C++** for efficiency\
 🔹 **Custom Linked List** (No built-in structures allowed!)\
 🔹 **Makefile** for seamless compilation
-
-* * * * *
-
-🔥 **Get Started Today!**\
-📩 **Questions?** Open an [Issue](https://github.com/your-repo/word-analyzer/issues) or Fork & Improve!
-
-* * * * *
-
-**✨ A powerful tool for text analysis---fast, efficient, and expandable! ✨**

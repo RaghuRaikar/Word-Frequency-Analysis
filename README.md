@@ -116,13 +116,13 @@ This creates an executable named `bard`.
 📂 **File Structure**
 ---------------------
 
-`📂 word-analyzer
- ├── 📄 Makefile       # Automates compilation
- ├── 📄 bard.cpp       # Main program logic
- ├── 📄 linkedlist.h   # Custom linked list implementation
- ├── 📄 input.txt      # Sample input queries
- ├── 📄 output.txt     # Generated output
- ├── 📄 README.md      # This file`
+- 📂 word-analyzer
+- ├── 📄 Makefile       # Automates compilation
+- ├── 📄 bard.cpp       # Main program logic
+- ├── 📄 linkedlist.h   # Custom linked list implementation
+- ├── 📄 input.txt      # Sample input queries
+- ├── 📄 output.txt     # Generated output
+- ├── 📄 README.md      # This file`
 
 * * * * *
 

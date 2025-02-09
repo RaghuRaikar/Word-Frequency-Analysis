@@ -176,17 +176,6 @@ This will create an **executable** named `bard`.
 
 * * * * *
 
-🚀 Releases & Demo
-------------------
-
-📽 **Watch the program in action!** 👉 **[Check out the latest release](https://github.com/your-repo/releases)**
-
-💡 **To include `.mov` demo in README:**\
-1️⃣ Upload your `.mov` file as part of a **GitHub Release**\
-2️⃣ Add a **link to the Release Page** in this section
-
-* * * * *
-
 💡 Want to Improve It?
 ----------------------
 
